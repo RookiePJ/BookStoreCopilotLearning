@@ -4,28 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Github hooks">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/config/DataLoaderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/domain/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/dto/BookDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/exception/BookNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/mapper/BookMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/repository/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/service/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/service/impl/BookServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/web/BookController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/web/RestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pjr/bookstore/integration/BookServiceIntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pjr/bookstore/service/BookServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Added books api, service, with tests" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -231,7 +210,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1779282127261</updated>
-      <workItem from="1779282128283" duration="6902000" />
+      <workItem from="1779282128283" duration="7391000" />
     </task>
     <task id="LOCAL-00001" summary="Rename classes and packages to book store">
       <option name="closed" value="true" />
@@ -289,7 +268,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779286695405</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added books api, service, with tests">
+      <option name="closed" value="true" />
+      <created>1779290573610</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1779290573610</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +301,8 @@
     <MESSAGE value="Prod profile and workflow additions" />
     <MESSAGE value="Prod profile" />
     <MESSAGE value="Github hooks" />
-    <option name="LAST_COMMIT_MESSAGE" value="Github hooks" />
+    <MESSAGE value="Added books api, service, with tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added books api, service, with tests" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
