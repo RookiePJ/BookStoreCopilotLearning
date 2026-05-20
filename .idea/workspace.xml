@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="IntelJ IDE config files">
-      <change afterPath="$PROJECT_DIR$/.githooks/pre-commit" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/deny-dev-debug.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/scripts/verify-dev-file.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Prod profile and workflow additions">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1779282127261</updated>
-      <workItem from="1779282128283" duration="3126000" />
+      <workItem from="1779282128283" duration="3489000" />
     </task>
     <task id="LOCAL-00001" summary="Rename classes and packages to book store">
       <option name="closed" value="true" />
@@ -183,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779285642634</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Prod profile and workflow additions">
+      <option name="closed" value="true" />
+      <created>1779286339044</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1779286339044</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -205,7 +209,8 @@
     <MESSAGE value="Update co-pilot agents" />
     <MESSAGE value="Add AOP logging and dev profile" />
     <MESSAGE value="IntelJ IDE config files" />
-    <option name="LAST_COMMIT_MESSAGE" value="IntelJ IDE config files" />
+    <MESSAGE value="Prod profile and workflow additions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prod profile and workflow additions" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
