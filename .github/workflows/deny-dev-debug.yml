@@ -1,0 +1,39 @@
+name: Deny dev DEBUG in main
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  check-dev-logging:
+    name: Check application-dev.properties for DEBUG
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Fail if application-dev.properties contains DEBUG
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          FILE="src/main/resources/application-dev.properties"
+
+          if [[ ! -f "$FILE" ]]; then
+            echo "No $FILE present — skipping check."
+            exit 0
+          fi
+
+          # Search for any property assigned DEBUG. Fail the job if found to prevent merging to main.
+          if grep -qE '=\s*DEBUG' "$FILE"; then
+            echo "ERROR: $FILE contains DEBUG logging level which must not be committed to the main branch." >&2
+            echo "Remove DEBUG entries from $FILE or do not target the main branch with this change." >&2
+            # Output an annotation so GitHub will show the error inline
+            echo "::error file=$FILE::application-dev.properties contains DEBUG entries which are disallowed on the main branch"
+            exit 1
+          fi
+
+          echo "$FILE does not contain DEBUG entries."
+

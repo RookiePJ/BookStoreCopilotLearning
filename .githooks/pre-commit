@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Local pre-commit hook to prevent committing application-dev.properties with DEBUG entries
+set -euo pipefail
+
+# Run the verification helper. If it fails, pre-commit will abort.
+./scripts/verify-dev-file.sh
+
+exit 0
+

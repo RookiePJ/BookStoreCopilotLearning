@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Update co-pilot agents">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/aop/LoggingAspect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pjr/bookstore/BookStoreApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/BookStoreApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="IntelJ IDE config files">
+      <change afterPath="$PROJECT_DIR$/.githooks/pre-commit" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/deny-dev-debug.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/scripts/verify-dev-file.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +27,7 @@
             <option name="modeId" value="Agent" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
-            <option name="status" value="WaitingForResponse" />
+            <option name="status" value="Completed" />
             <option name="targetType" value="LOCAL" />
           </session>
           <session>
@@ -98,6 +98,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHELLCHECK.PATH": "/Users/peterrooke/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/Shell Script/shellcheck",
+    "Spring Boot.BookStoreApplication Dev Profile.executor": "Run",
     "Spring Boot.BookStoreApplication.executor": "Run",
     "Spring Boot.JavaSpringCopilotTemplateApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -147,7 +149,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1779282127261</updated>
-      <workItem from="1779282128283" duration="2208000" />
+      <workItem from="1779282128283" duration="3126000" />
     </task>
     <task id="LOCAL-00001" summary="Rename classes and packages to book store">
       <option name="closed" value="true" />
@@ -165,7 +167,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779284567269</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add AOP logging and dev profile">
+      <option name="closed" value="true" />
+      <created>1779285547423</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1779285547423</updated>
+    </task>
+    <task id="LOCAL-00004" summary="IntelJ IDE config files">
+      <option name="closed" value="true" />
+      <created>1779285642634</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1779285642634</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,7 +203,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rename classes and packages to book store" />
     <MESSAGE value="Update co-pilot agents" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update co-pilot agents" />
+    <MESSAGE value="Add AOP logging and dev profile" />
+    <MESSAGE value="IntelJ IDE config files" />
+    <option name="LAST_COMMIT_MESSAGE" value="IntelJ IDE config files" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>
