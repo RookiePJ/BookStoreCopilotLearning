@@ -1,4 +1,4 @@
-name: Deny dev DEBUG in main
+name: Deny prod DEBUG in main
 
 on:
   push:
@@ -7,19 +7,20 @@ on:
     branches: [ main ]
 
 jobs:
-  check-dev-logging:
-    name: Check application-dev.properties for DEBUG
+  check-prod-logging:
+    name: Check application-prod.properties for DEBUG
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fail if application-dev.properties contains DEBUG
+      - name: Fail if application-prod.properties contains DEBUG
         shell: bash
         run: |
           set -euo pipefail
 
-          FILE="src/main/resources/application-dev.properties"
+          FILE="src/main/resources/application-prod.properties"
+          
 
           if [[ ! -f "$FILE" ]]; then
             echo "No $FILE present — skipping check."
@@ -31,7 +32,7 @@ jobs:
             echo "ERROR: $FILE contains DEBUG logging level which must not be committed to the main branch." >&2
             echo "Remove DEBUG entries from $FILE or do not target the main branch with this change." >&2
             # Output an annotation so GitHub will show the error inline
-            echo "::error file=$FILE::application-dev.properties contains DEBUG entries which are disallowed on the main branch"
+            echo "::error file=$FILE::application-prod.properties contains DEBUG entries which are disallowed on the main branch"
             exit 1
           fi
 
