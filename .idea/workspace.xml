@@ -4,8 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Prod profile and workflow additions">
+    <list default="true" id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="Github hooks">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/config/DataLoaderConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/domain/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/dto/BookDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/exception/BookNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/mapper/BookMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/repository/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/service/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/web/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pjr/bookstore/web/RestExceptionHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pjr/bookstore/integration/BookServiceIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pjr/bookstore/service/BookServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +42,7 @@
             <option name="modeId" value="Agent" />
             <option name="modelType" value="builtin_family" />
             <option name="modelValue" value="auto" />
-            <option name="status" value="Completed" />
+            <option name="status" value="Stopped" />
             <option name="targetType" value="LOCAL" />
           </session>
           <session>
@@ -56,6 +75,12 @@
   <component name="GithubDefaultAccount">
     <option name="defaultAccountId" value="7a9eab74-49e3-40b1-9b0b-2d6e83dd458d" />
   </component>
+  <component name="HttpClientEndpointsTabState">
+    <option name="cachedRequestData" value="&lt;CachedHttpClientTabRequests&gt;&#10;  &lt;entry key=&quot;1377253c0f306242d27c841bdf9a27a45460df6b&quot; value=&quot;###&amp;#10;GET http://localhost:8080/api/books&quot; /&gt;&#10;&lt;/CachedHttpClientTabRequests&gt;" />
+  </component>
+  <component name="HttpClientOnboardingState"><![CDATA[{
+  "isOnboardingCommentShown": true
+}]]></component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -67,6 +92,9 @@
   "associatedIndex": 8
 }]]></component>
   <component name="ProjectId" id="3DzPs0eiyCqcoyIW45JOARDkhnK" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectSessionTemplates">
     <option name="panelTemplate">
       <template>
@@ -87,6 +115,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BookServiceImplTest.executor": "Run",
+    "JUnit.BookServiceIntegrationTest.executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
     "RequestMappingsPanelWidth0": "75",
@@ -96,6 +126,7 @@
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHELLCHECK.PATH": "/Users/peterrooke/Library/Application Support/JetBrains/IntelliJIdea2026.1/plugins/Shell Script/shellcheck",
     "Spring Boot.BookStoreApplication Dev Profile.executor": "Run",
+    "Spring Boot.BookStoreApplication Prod Profile.executor": "Run",
     "Spring Boot.BookStoreApplication.executor": "Run",
     "Spring Boot.JavaSpringCopilotTemplateApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
@@ -110,8 +141,47 @@
   }
 }]]></component>
   <component name="RunManager" selected="Spring Boot.BookStoreApplication Dev Profile">
+    <configuration name="BookServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaSpringCopilotTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pjr.bookstore.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pjr.bookstore.service" />
+      <option name="MAIN_CLASS_NAME" value="pjr.bookstore.service.BookServiceImplTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookServiceIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="JavaSpringCopilotTemplate" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pjr.bookstore.integration.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pjr.bookstore.integration" />
+      <option name="MAIN_CLASS_NAME" value="pjr.bookstore.integration.BookServiceIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BookStoreApplication Dev Profile" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="ACTIVE_PROFILES" value="dev" />
+      <module name="JavaSpringCopilotTemplate" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pjr.bookstore.BookStoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BookStoreApplication Prod Profile" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <option name="ACTIVE_PROFILES" value="prod" />
       <module name="JavaSpringCopilotTemplate" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pjr.bookstore.BookStoreApplication" />
       <method v="2">
@@ -126,9 +196,18 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.BookServiceIntegrationTest" />
+      <item itemvalue="JUnit.BookServiceImplTest" />
       <item itemvalue="Spring Boot.BookStoreApplication" />
       <item itemvalue="Spring Boot.BookStoreApplication Dev Profile" />
+      <item itemvalue="Spring Boot.BookStoreApplication Prod Profile" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.BookServiceIntegrationTest" />
+        <item itemvalue="JUnit.BookServiceImplTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -138,6 +217,13 @@
       </set>
     </attachedChunks>
   </component>
+  <component name="SpringProfilesService">
+    <option name="activeProfiles">
+      <map>
+        <entry key="JavaSpringCopilotTemplate" value="dev" />
+      </map>
+    </option>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="66252d87-dd12-4c9a-91e6-202df1cf6f1e" name="Changes" comment="" />
@@ -145,7 +231,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1779282127261</updated>
-      <workItem from="1779282128283" duration="3489000" />
+      <workItem from="1779282128283" duration="6902000" />
     </task>
     <task id="LOCAL-00001" summary="Rename classes and packages to book store">
       <option name="closed" value="true" />
@@ -187,7 +273,23 @@
       <option name="project" value="LOCAL" />
       <updated>1779286339044</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Prod profile">
+      <option name="closed" value="true" />
+      <created>1779286650296</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1779286650296</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Github hooks">
+      <option name="closed" value="true" />
+      <created>1779286695405</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1779286695405</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -210,7 +312,9 @@
     <MESSAGE value="Add AOP logging and dev profile" />
     <MESSAGE value="IntelJ IDE config files" />
     <MESSAGE value="Prod profile and workflow additions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Prod profile and workflow additions" />
+    <MESSAGE value="Prod profile" />
+    <MESSAGE value="Github hooks" />
+    <option name="LAST_COMMIT_MESSAGE" value="Github hooks" />
   </component>
   <component name="github-copilot-workspace">
     <instructionFileLocations>

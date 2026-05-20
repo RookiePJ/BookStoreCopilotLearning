@@ -1,0 +1,11 @@
+-- Sample/test data for the books table
+-- This file is loaded automatically on application startup (if spring.jpa.hibernate.ddl-auto is set appropriately)
+-- Note: The DataLoaderConfig.java provides a more flexible, service-based alternative
+--
+-- INSERT INTO books (title, author, published_date, price) VALUES
+-- ('1984', 'George Orwell', '1949-06-08', 9.99),
+-- ('Animal Farm', 'George Orwell', '1945-08-17', 7.99),
+-- ('To Kill a Mockingbird', 'Harper Lee', '1960-07-11', 10.99),
+-- ('The Great Gatsby', 'F. Scott Fitzgerald', '1925-04-10', 8.99),
+-- ('Pride and Prejudice', 'Jane Austen', '1813-01-28', 6.99);
+--
