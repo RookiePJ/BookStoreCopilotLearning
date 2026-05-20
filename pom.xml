@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>pjr</groupId>
-    <artifactId>JavaSpringCopilotTemplate</artifactId>
+    <artifactId>BookStoreApplication</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>JavaSpringCopilotTemplate</name>
-    <description>JavaSpringCopilotTemplate</description>
+    <name>BookStoreApplication</name>
+    <description>BookStoreApplication</description>
     <url/>
     <licenses>
         <license/>

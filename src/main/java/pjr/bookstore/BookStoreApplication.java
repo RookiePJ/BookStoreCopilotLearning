@@ -1,12 +1,12 @@
-package pjr.javaspringcopilottemplate;
+package pjr.bookstore;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JavaSpringCopilotTemplateApplication {
+public class BookStoreApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(JavaSpringCopilotTemplateApplication.class, args);
+        SpringApplication.run(BookStoreApplication.class, args);
     }
 }

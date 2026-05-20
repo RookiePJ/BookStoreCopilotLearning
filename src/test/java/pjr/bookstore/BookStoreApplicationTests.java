@@ -1,10 +1,10 @@
-package pjr.javaspringcopilottemplate;
+package pjr.bookstore;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JavaSpringCopilotTemplateApplicationTests {
+class BookStoreApplicationTests {
 
     @Test
     void contextLoads() {
