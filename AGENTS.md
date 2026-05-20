@@ -4,37 +4,35 @@ This file defines how AI agents must operate inside this repository.
 It does not redefine coding or design rules. It points to their sources.
 
 ## Source of truth (must follow)
-AI agents MUST follow these instruction files:
+AI agents MUST follow these instruction files (present under `.github/instructions/`):
 
 1) `general.instructions.md`
-  - Global rules that apply to all files and workflows
+  - Global rules that apply to all files and workflows (see `.github/instructions/general.instructions.md`)
 
-2) `co-pilot-instructions.md`
-  - Architecture, folder structure, and Copilot-specific behavior
+2) `springboot.instructions.md`
+  - Spring Boot framework coding standards and conventions (see `.github/instructions/springboot.instructions.md`)
 
-3) `springboot.instuctions.md`
-  - Spring Boot framework coding standards and conventions
-
-4) `shell.instructions.md`
-  - Unix shell scripting standards and conventions
+3) `shell.instructions.md`
+  - Unix shell scripting standards and conventions (see `.github/instructions/shell.instructions.md`)
 
 ## Project Overview
-This is a standard Maven-based Java project (`TestCoPilot`) with a basic structure:
-- `src/main/java/`: Main application code
-- `src/main/resources/`: Configuration and resource files
+This is a Spring Boot Maven-based Java project (artifactId: `BookStoreApplication`, groupId: `pjr`) with a standard structure:
+- `src/main/java/`: Main application code (root package: `pjr.bookstore`, example: `src/main/java/pjr/bookstore/BookStoreApplication.java`)
+- `src/main/resources/`: Configuration and resource files (example: `application.properties`)
 - `src/test/java/`: Unit tests
 
 Key configuration in `pom.xml`:
-- Java version: 26
+- Java version (pom property `java.version`): 25
 - Source encoding: UTF-8
-- No external dependencies currently
+- Project uses Spring Boot (parent `org.springframework.boot:spring-boot-starter-parent`), and includes dependencies such as Spring Web MVC, Spring Data JPA, Spring Shell, SpringDoc OpenAPI, H2 (runtime) and Lombok.
 
 ## Build Workflow
-- Compile code: `mvn compile`
-- Run tests: `mvn test`
-- Clean build artifacts: `mvn clean`
-- Create JAR: `mvn package`
-- Full build: `mvn clean compile test package`
+- Compile code: `mvn compile` (or use the wrapper `./mvnw compile`)
+- Run tests: `mvn test` (or `./mvnw test`)
+- Clean build artifacts: `mvn clean` (or `./mvnw clean`)
+- Create JAR: `mvn package` (or `./mvnw package`)
+- Run application locally: `mvn spring-boot:run` (or `./mvnw spring-boot:run`)
+- Full build: `mvn clean compile test package` (or `./mvnw clean package`)
 
 ## Development Conventions
 - Use standard Maven directory structure
@@ -43,11 +41,17 @@ Key configuration in `pom.xml`:
 - .gitignore excludes `target/`, IDE files (.idea/), and common artifacts
 
 ## Integration Points
-- No external services or APIs integrated yet
-- Standard JVM runtime environment
+- Embedded/in-process integrations used in this repo:
+  - H2 in-memory database (dependency `com.h2database:h2`) and `spring-boot-h2console` for web console access
+  - Spring Shell (`org.springframework.shell`) for interactive CLI commands
+  - SpringDoc OpenAPI UI (`org.springdoc:springdoc-openapi-starter-webmvc-ui`) for API documentation
+- No external remote services are configured by default; standard JVM runtime environment applies
 
 ## Key Files
 - `pom.xml`: Maven configuration and dependencies
+- `mvnw`, `mvnw.cmd`: Maven wrapper scripts (use `./mvnw` on macOS/Linux)
+- `src/main/java/pjr/bookstore/BookStoreApplication.java`: Main Spring Boot application class
+- `src/main/resources/application.properties`: Runtime configuration
 - `.gitignore`: Excludes build artifacts and IDE files
 
 ## Code Formatting
