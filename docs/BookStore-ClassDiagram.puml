@@ -1,0 +1,136 @@
+@startuml BookStore Class Diagram
+!theme plain
+skinparam backgroundColor #FFFFFF
+skinparam classBackgroundColor #F0F0F0
+skinparam classBorderColor #333333
+skinparam arrowColor #333333
+
+package "pjr.bookstore" {
+
+    package "web" {
+        class BookController {
+            - bookService: BookService
+            + getAll(): ResponseEntity<List<BookDto>>
+            + getById(id: Long): ResponseEntity<BookDto>
+            + create(bookDto: BookDto): ResponseEntity<BookDto>
+            + update(id: Long, bookDto: BookDto): ResponseEntity<BookDto>
+            + delete(id: Long): ResponseEntity<Void>
+        }
+
+        class RestExceptionHandler {
+            + handleNotFound(ex: BookNotFoundException): ResponseEntity<Map<String, String>>
+        }
+    }
+
+    package "service" {
+        interface BookService {
+            + create(bookDto: BookDto): BookDto
+            + update(id: Long, bookDto: BookDto): BookDto
+            + findById(id: Long): BookDto
+            + findAll(): List<BookDto>
+            + delete(id: Long): void
+        }
+
+        class BookServiceImpl {
+            - bookRepository: BookRepository
+            + create(bookDto: BookDto): BookDto
+            + update(id: Long, bookDto: BookDto): BookDto
+            + findById(id: Long): BookDto
+            + findAll(): List<BookDto>
+            + delete(id: Long): void
+        }
+    }
+
+    package "repository" {
+        interface BookRepository {
+        }
+    }
+
+    package "domain" {
+        class Book {
+            - id: Long
+            - title: String
+            - author: String
+            - publishedDate: LocalDate
+            - price: BigDecimal
+            + getId(): Long
+            + getTitle(): String
+            + getAuthor(): String
+            + getPublishedDate(): LocalDate
+            + getPrice(): BigDecimal
+            + setTitle(title: String): void
+            + setAuthor(author: String): void
+            + setPublishedDate(date: LocalDate): void
+            + setPrice(price: BigDecimal): void
+        }
+    }
+
+    package "dto" {
+        class BookDto {
+            - id: Long
+            - title: String
+            - author: String
+            - publishedDate: LocalDate
+            - price: BigDecimal
+            + getId(): Long
+            + getTitle(): String
+            + getAuthor(): String
+            + getPublishedDate(): LocalDate
+            + getPrice(): BigDecimal
+            + setTitle(title: String): void
+            + setAuthor(author: String): void
+            + setPublishedDate(date: LocalDate): void
+            + setPrice(price: BigDecimal): void
+        }
+    }
+
+    package "mapper" {
+        class BookMapper {
+            + {static} toDto(book: Book): BookDto
+            + {static} toEntity(dto: BookDto): Book
+        }
+    }
+
+    package "exception" {
+        class BookNotFoundException {
+            + BookNotFoundException(id: Long)
+        }
+    }
+
+    package "aop" {
+        class LoggingAspect {
+        }
+    }
+}
+
+' Relationships
+BookController --> BookService : uses
+BookServiceImpl ..|> BookService : implements
+BookServiceImpl --> BookRepository : uses
+BookServiceImpl --> BookMapper : uses
+BookServiceImpl --> BookNotFoundException : throws
+BookRepository --> Book : manages
+BookMapper --> Book : converts from
+BookMapper --> BookDto : converts to
+RestExceptionHandler --> BookNotFoundException : handles
+LoggingAspect -.-> BookController : cross-cuts
+LoggingAspect -.-> BookServiceImpl : cross-cuts
+
+' Inheritance
+BookNotFoundException --> RuntimeException : extends
+
+' Legend
+note right
+    **Layers:**
+    - Web Layer: BookController, RestExceptionHandler
+    - Service Layer: BookService, BookServiceImpl
+    - Repository Layer: BookRepository
+    - Domain Layer: Book
+    - DTO Layer: BookDto
+    - Mapper: BookMapper (converts between layers)
+    - Exception: BookNotFoundException
+    - AOP: LoggingAspect (cross-cutting concern)
+end note
+
+@enduml
+
