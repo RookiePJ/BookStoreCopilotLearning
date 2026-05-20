@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Verify that application-dev.properties does not contain DEBUG logging entries
+# Verify that application-prod.properties does not contain DEBUG logging entries
 set -euo pipefail
 
 # Allow overriding the file path for testing: first arg is optional
-FILE="${1:-src/main/resources/application-dev.properties}"
+FILE="${1:-src/main/resources/application-prod.properties}"
 
 if [[ ! -f "$FILE" ]]; then
   echo "No $FILE present - OK"

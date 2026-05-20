@@ -69,7 +69,7 @@ Now the `pre-commit` hook will run automatically when you create commits locally
 You can also run the helper manually:
 
 ```bash
-./scripts/verify-dev-file.sh
+./scripts/verify-prod-file.sh
 # or to test another file:
-./scripts/verify-dev-file.sh path/to/somefile.properties
+./scripts/verify-prod-file.sh path/to/somefile.properties
 ```
