@@ -1,0 +1,81 @@
+openapi: "3.1.0"
+info:
+  title: "BookStoreCopilotLearning API"
+  description: "BookStoreCopilotLearning API"
+  version: "1.0.0"
+servers:
+  - url: "https://BookStoreCopilotLearning"
+paths:
+  /api/books/{id}:
+    put:
+      summary: "PUT api/books/{id}"
+      operationId: "update"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookDto"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/BookDto"
+    delete:
+      summary: "DELETE api/books/{id}"
+      operationId: "delete"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+      responses:
+        "200":
+          description: "OK"
+    get:
+      summary: "GET api/books/{id}"
+      operationId: "getById"
+      parameters:
+        - name: "id"
+          in: "path"
+          required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/BookDto"
+  /api/books:
+    post:
+      summary: "POST api/books"
+      operationId: "create"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookDto"
+        required: true
+      responses:
+        "200":
+          description: "OK"
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/BookDto"
+    get:
+      summary: "GET api/books"
+      operationId: "getAll"
+      responses:
+        "200":
+          description: "OK"
+components:
+  schemas:
+    BookDto:
+      type: "object"
+      properties: { }
