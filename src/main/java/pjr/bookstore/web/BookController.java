@@ -29,7 +29,7 @@ public class BookController {
         return ResponseEntity.ok(list);
     }
 
-    @GetMapping
+    @GetMapping("/sorted")
     public ResponseEntity<List<BookDto>> getAllSorted() {
         final List<BookDto> list = bookService.findAllSorted();
         return ResponseEntity.ok(list);
@@ -61,4 +61,3 @@ public class BookController {
         return ResponseEntity.noContent().build();
     }
 }
-

@@ -12,7 +12,7 @@ import jakarta.validation.constraints.NotNull;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder(setterPrefix = "with")
-public class BookDto {
+public class BookDto implements Comparable<BookDto> {
     private Long id;
 
     @NotBlank(message = "title must not be blank")
@@ -25,5 +25,18 @@ public class BookDto {
 
     @NotNull(message = "price must not be null")
     private BigDecimal price;
-}
 
+    @Override
+    public int compareTo(final BookDto other) {
+        if (other == null) {
+            return 1;
+        }
+        // Primary sort: by author (ascending)
+        final int authorComparison = this.author.compareTo(other.author);
+        if (authorComparison != 0) {
+            return authorComparison;
+        }
+        // Secondary sort: by title if authors are equal (ascending)
+        return this.title.compareTo(other.title);
+    }
+}
