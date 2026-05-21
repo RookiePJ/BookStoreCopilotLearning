@@ -63,6 +63,15 @@ public class BookServiceImpl implements BookService {
     }
 
     @Override
+    @Transactional(readOnly = true)
+    public List<BookDto> findAllSorted() {
+        return bookRepository.findAll().stream()
+                .map(BookMapper::toDto)
+                .sorted()
+                .collect(Collectors.toList());
+    }
+
+    @Override
     public void delete(final Long id) {
         if (!bookRepository.existsById(id)) {
             throw new BookNotFoundException(id);

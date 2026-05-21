@@ -29,6 +29,12 @@ public class BookController {
         return ResponseEntity.ok(list);
     }
 
+    @GetMapping
+    public ResponseEntity<List<BookDto>> getAllSorted() {
+        final List<BookDto> list = bookService.findAllSorted();
+        return ResponseEntity.ok(list);
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<BookDto> getById(@PathVariable("id") final Long id) {
         final BookDto dto = bookService.findById(id);
